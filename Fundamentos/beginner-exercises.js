@@ -99,11 +99,3 @@ const cBigInt = 12345678901234567890n; // BigInt
 // Error con la constante cIndefinido -> TypeError: Assignment to constant variable.
 // Error con la constante cSimbolo -> TypeError: Assignment to constant variable.
 // Error con la constante cBigInt -> TypeError: Assignment to constant variable.
-
-
-let numero = 1/8
-console.log(numero)
-// Imprime el resultado
-
-numero = 0.8 // Si es 0,8 imprime 0 
-console.log(numero)
