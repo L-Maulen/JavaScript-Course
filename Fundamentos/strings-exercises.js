@@ -44,13 +44,19 @@ console.log("Palabra original:",palabra)
 console.log(palabra.replaceAll(" ", "-"))
 
 // 8. Comprueba si una cadena de texto contiene una palabra concreta
-console.log("\n--- Comprobando si el String contiene una palabra especifica ---")
+console.log("\n--- Comprobando si 2 strings son iguales ---")
 console.log("Palabra especifica: 'prueba'")
 console.log(palabra.includes("prueba"))
 
 // 9. Comprueba si dos strings son iguales
+let palabra1 = "Hola mundo!"
+let palabra2 = "Hola Mundo!"
 
-
+console.log("\n--- Comprobando si dos Strings son iguales ---")
+console.log("String 1: " + palabra1)
+console.log("String 2: " + palabra2)
+console.log("Son iguales?(===):", palabra1 === palabra2)
+console.log("Son iguales?(==):", palabra1 == palabra2)
 
 // 10. Comprueba si dos strings tienen la misma longitud
 
