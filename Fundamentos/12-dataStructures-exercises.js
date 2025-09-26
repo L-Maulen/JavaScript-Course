@@ -1,5 +1,5 @@
 // 1. Crea un array que almacene cinco animales
-let animales = ["Perro", "Gato", "Leon", "Gallina", "Pato"]
+const animales = ["Perro", "Gato", "Leon", "Gallina", "Pato"]
 console.log("Lista original:")
 console.log(animales)
 console.log()
@@ -38,12 +38,35 @@ setPractica.delete(libroEliminar)
 console.log(setPractica)
 
 // 7. Crea un mapa que asocie el número del mes a su nombre
+const mapMeses = new Map([
+    ["1", "Enero"],
+    ["2", "Febrero"],
+    ["3", "Marzo"],
+    ["4", "Abril"],
+    ["5", "Mayo"],
+    ["6", "Junio"],
+    ["7", "Julio"],
+    ["8", "Agosto"],
+    ["9", "Septiembre"],
+    ["10", "Octubre"],
+    ["11", "Noviembre"],
+    ["12", "Diciembre"]
+])
 
+console.log("7.- Mapa que asocia numeros del mes con su nombre:\n", mapMeses)
 
 // 8. Comprueba si el mes número 5 existe en el map e imprime su valor
+console.log("8.- Comprobar si existe el mes numero 5 en el Map.\n")
+
+
+if(mapMeses.has("5")){ // Es sensible al tipo de dato, supongo que internamente utiliza el comparador "==="
+    console.log(`Contiene el mes numero 5, su valor es: ${mapMeses.get("5")}`)
+} else{
+    console.log("El map no contiene el mes numero 5 o su valor esta mal ingresado")
+}
 
 
 // 9. Añade al mapa una clave con un array que almacene los meses de verano
+mapMeses.set("Meses de verano",["Diciembre","Enero","Febrero"])
+console.log("9.- Añadiendo clave con valor de un array:\n", mapMeses)
 
-
-// 10. Crea un Array, transfórmalo a un Set y almacénalo en un Map
