@@ -1,5 +1,3 @@
-// NOTA: Explora diferentes sintaxis de funciones para resolver los ejercicios
-
 // 1. Crea una función que reciba dos números y devuelva su suma
 console.log("1.- Funcion que sume 2 numeros:")
 
@@ -89,18 +87,57 @@ if(funNumPrimo(numero)){
 }
 
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
+console.log("\n6.- ")
+let arreglo1 = [true, false, 1, "312", "123", 0.21]
+let arreglo2 = [false, "HolaM", "Luis", [1,5,1], "123"]
 
 function elemComunesArrays(arreglo1, arreglo2){
     let arregloConjunto = []
 
+    for(let valor of arreglo1){
+        if(arreglo2.includes(valor)){
+            arregloConjunto.push(valor)
+        }
+    }
+
     return arregloConjunto
 }
 
-// 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
+console.log("Elementos comunes de las 2 listas:\n",elemComunesArrays(arreglo1,arreglo2))
 
+// 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
+console.log("\n7.- ")
+
+arreglo1 = [1,52,123,6,23,97,23,654,309,26,31,23,22,88]
+
+const funSumPares = (arregloNums) => {
+    let suma = 0
+
+    for(let valor of arregloNums){
+        if(valor%2 === 0){
+            suma += valor
+        }
+    }
+    return suma
+}
+console.log("La suma de todos los numeros pares es:",funSumPares(arreglo1))
 
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
+console.log("\n8.- ")
 
+arreglo1 = [12,5,16,9,4,1,7]
+
+const funCuadrados = (arreglo) => {
+    let arregloCuadrados = []
+
+    for(let valor of arreglo){
+        arregloCuadrados.push(valor**2)
+    }
+
+    return arregloCuadrados
+}
+
+console.log("EL nuevo arreglo con los valores al cuadrado es:\n", funCuadrados(arreglo1))
 
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
 console.log("\n9.-")
